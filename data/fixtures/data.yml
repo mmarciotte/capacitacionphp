@@ -1,0 +1,14 @@
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: null
+    last_name: null
+    email_address: mmarciotte@rbmwebsolutions.com
+    username: admin
+    algorithm: sha1
+    salt: cf612704b3f8935826afd14b8f78d71b
+    password: 1f15e8434dddc8755e25145165de352e3e58852d
+    is_active: true
+    is_super_admin: true
+    last_login: null
+    created_at: '2012-09-13 01:58:37'
+    updated_at: '2012-09-13 01:58:55'

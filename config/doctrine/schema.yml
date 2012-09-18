@@ -1,0 +1,17 @@
+News:
+  actAs:
+    Timestampable: ~
+    SoftDelete: ~
+  columns:
+    body: {type: string(250), notnull: true}
+    brief: {type: string(100)}
+    image: {type: string(250)}
+    title: {type: string(250), notnull: true}
+    priority: {type: int}
+    category_id: {type: bigint(8)}
+  relations:
+    Category: {type: one, local: category_id, foreign: id}
+
+Category:
+  columns:
+    name: {type: string(250), notnull: true}

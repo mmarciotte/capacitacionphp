@@ -11,7 +11,19 @@ News:
     category_id: {type: bigint(8)}
   relations:
     Category: {type: one, local: category_id, foreign: id}
+    Tags: {class: Tags, local: news_id, foreign: tags_id, refClass: NewsTags, foreignAlias: News}
 
 Category:
   columns:
     name: {type: string(250), notnull: true}
+    
+Tags:
+  columns:
+    name: {type: string(250), notnull: true}
+#  relations:
+#    News: {class: News, local: id, foreign: tags_id, refClass: NewsTags, foreignAlias: Tags}
+        
+NewsTags:
+  columns:
+    news_id: {type: bigint(8)}
+    tags_id: {type: bigint(8)}

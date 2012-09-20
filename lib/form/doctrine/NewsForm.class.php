@@ -18,5 +18,8 @@ class NewsForm extends BaseNewsForm
             unset($this->widgetSchema['created_at']);
             unset($this->widgetSchema['updated_at']);
          }
+         
+        $this->widgetSchema['deleted_at'] = new sfWidgetFormDateJQueryUI();
+        $this->widgetSchema['tags_list']  = new sfWidgetFormDoctrineChoice(array('multiple' => true, 'expanded' => true, 'model' => 'Tags'));
     }
 }

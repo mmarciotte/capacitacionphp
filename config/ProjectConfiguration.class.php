@@ -10,9 +10,11 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrinePlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->enablePlugins('sfAdminThemejRollerPlugin');
+    $this->enablePlugins('sfJQueryUIPlugin');
   }
   
       public function configureDoctrine(Doctrine_Manager $manager) {
         $manager->setAttribute(Doctrine::ATTR_USE_DQL_CALLBACKS, true);
     }
+    
 }

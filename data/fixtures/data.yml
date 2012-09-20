@@ -1,3 +1,19 @@
+Category:
+  Category_1:
+    name: Deportes
+  Category_2:
+    name: Politicas
+News:
+  News_2:
+    body: '<script>alert("hola");</script>'
+    brief: sdasd
+    image: asdasd
+    title: asdasd
+    priority: '1'
+    Category: Category_1
+    created_at: '2012-09-20 00:35:11'
+    updated_at: '2012-09-20 00:35:11'
+    deleted_at: null
 sfGuardUser:
   sfGuardUser_1:
     first_name: null
@@ -6,7 +22,7 @@ sfGuardUser:
     username: admin
     algorithm: sha1
     salt: cf612704b3f8935826afd14b8f78d71b
-    password: 1f15e8434dddc8755e25145165de352e3e58852d
+    password: 4d5ce5e0b637942e735ce11dd93fab9daadab1e3
     is_active: true
     is_super_admin: true
     last_login: null

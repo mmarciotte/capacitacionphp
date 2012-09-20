@@ -16,7 +16,7 @@ generator:
       fields:
         body: {rich: true}
       list:
-        display: [body, _imagen, brief, Category]
+        display: [body, _imagen, brief, Category, _tags]
       filter:  ~
       form:    ~
       edit:    ~

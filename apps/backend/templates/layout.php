@@ -10,5 +10,13 @@
   </head>
   <body>
     <?php echo $sf_content ?>
+    <center>
+    <h2 style="font-size: 30px">Graficos estadisticos faciles de modificar</h2>
+    <?php stOfc::createChart( 500, 250, 'stOfcExample/pieChartData', false ); ?>
+    <?php stOfc::createChart( 500, 250, 'stOfcExample/barChartData', false ); ?>
+    <br /><br />
+    <?php stOfc::createChart( 500, 250, 'stOfcExample/lineChartData', false ); ?>
+    <?php stOfc::createChart( 500, 250, 'stOfcExample/3DBarChartData', false ); ?>
+    </center>
   </body>
 </html>

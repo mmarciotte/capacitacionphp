@@ -1,0 +1,24 @@
+Book:
+  columns:
+    name: {type: string(200), notnull: true, unique: true}
+    description: {type: string(1000)}
+    author_id: {type: bigint(8)}
+    print_date: {type: date}
+  relations:
+    Author: {type: one, local: author_id, foreign: id}
+    Category: {class: Category, local: book_id, foreign: category_id, refClass: BooksCategory, foreignAlias: Books}
+    
+Author:
+  columns:
+    name: {type: string(200), notnull: true, unique: true}
+    birth_date: {type: date}
+    
+Category:
+  columns:
+    name: {type: string(200), notnull: true, unique: true}
+    
+BooksCategory:
+  columns:
+    book_id: {type: bigint(8)}
+    category_id: {type: bigint(8)}
+    

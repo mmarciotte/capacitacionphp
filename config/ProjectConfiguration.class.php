@@ -1,6 +1,6 @@
 <?php
 
-require_once 'D://xampp//htdocs//symfony-1.4.18//symfony-1.4.18//lib/autoload/sfCoreAutoload.class.php';
+require_once 'C://xampp//symfony-1.4.18//lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 
 class ProjectConfiguration extends sfProjectConfiguration
@@ -13,6 +13,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfJQueryUIPlugin');
     $this->enablePlugins('sfDatePickerTimePlugin');
     $this->enablePlugins('stOfcPlugin');
+    $this->enablePlugins('mpRealityAdminPlugin');
   }
   
   public function configureDoctrine(Doctrine_Manager $manager) {

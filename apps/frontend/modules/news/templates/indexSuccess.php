@@ -1,33 +1,35 @@
 <h1>Newss List</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Body</th>
-      <th>Brief</th>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Priority</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th>Deleted at</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="contenedor">    
     <?php foreach ($newss as $news): ?>
-    <tr>
-      <td><a href="<?php echo url_for('news/edit?id='.$news->getId()) ?>"><?php echo $news->getId() ?></a></td>
-      <td><?php echo $news->getBody() ?></td>
-      <td><?php echo $news->getBrief() ?></td>
-      <td><?php echo $news->getImage() ?></td>
-      <td><?php echo $news->getTitle() ?></td>
-      <td><?php echo $news->getPriority() ?></td>
-      <td><?php echo $news->getCreatedAt() ?></td>
-      <td><?php echo $news->getUpdatedAt() ?></td>
-    </tr>
+        <div class="noticia">
+            <div class="noticia_titulo">                
+                <a href="<?php echo url_for('news/edit?id='.$news->getId()) ?>"><?php echo $news->getTitle() ?></a>
+            </div>
+            <div class="noticia_imagen">
+                <img src="<?php echo $news->getImage() ?>" alt="<?php echo $news->getTitle() ?>" />
+            </div>
+            <div class="noticia_descripcion">
+                <?php echo $news->getBrief() ?>
+            </div>
+            <div class="noticia_body">
+                <?php echo $news->getBody() ?>
+            </div>           
+            <ul class="tags">
+                <?php
+                $tags = $news->getTags();
+                foreach ($tags as $tag)
+                {
+                    
+                    echo '<li><a href="#">'.$tag->getName().'</a></li>';
+                }
+                ?>
+            </ul>
+        </div>     
     <?php endforeach; ?>
-  </tbody>
-</table>
+    <div class="noticia_nueva_btn">
+         <a href="<?php echo url_for('news/new') ?>">Agregar Noticia</a>
+    </div>
+     
+</div>
 
-  <a href="<?php echo url_for('news/new') ?>">New</a>

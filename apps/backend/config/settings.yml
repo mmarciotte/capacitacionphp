@@ -33,5 +33,13 @@ all:
 
     # Enable the database manager
     use_database:           true
+    i18n: true
+    default_culture: es
     
-    enabled_modules:        [stOfcExample]
+    enabled_modules:        [default, stOfcExample, sfGuardPermission, sfGuardUser, sfGuardAuth]
+  .actions:
+    login_module:           sfGuardAuth
+    login_action:           signin
+    secure_module:          sfGuardAuth
+    secure_action:          secure
+  

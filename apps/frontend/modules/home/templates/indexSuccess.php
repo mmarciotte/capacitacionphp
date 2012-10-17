@@ -26,3 +26,6 @@
     </ul>
     <a href="shop.html" class="button">shop here!</a> 
 </div>
+
+
+<?php echo link_to('link', '@formsave', array('onClick' => "javascript:alert('hola');")) ?>

@@ -12,10 +12,13 @@ class homeActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $query = Doctrine_Core::getTable('news')
-      ->createQuery('news');
-    //        ->setHydrationMode(Doctrine::HYDRATE_ARRAY);
-    
+      $my_user = $this->getUser();
+echo "<pre>";
+
+$query = doctrine_core::getTable("News")->createQuery()->execute();
+
+//        print_r($query->getSqlQuery()); die;
+    print_r($query->execute()); die;
     $this->newss = $query->execute();
 
         
